@@ -7,6 +7,7 @@ html {
     margin: 0;
     font-family: 'Poppins';
     color: #333;
+    padding: 0 20px;
 }
 
 .full-height {
@@ -55,14 +56,20 @@ p {
 .links {
     padding: 0;
     list-style-type: none;
-    display: flex;
+    text-align: center;
 }
 
-/* Left margin accounts for the size of the separator */
-.links li:not(:last-child)::after {
-    margin-left: 10px;
-    margin-right: 16px;
-    content: " / ";
+@media screen and (min-width: 600px) {
+    .links {
+        display: flex;
+    }
+
+    /* Left margin accounts for the size of the separator */
+    .links li:not(:last-child)::after {
+        margin-left: 10px;
+        margin-right: 16px;
+        content: " / ";
+    }
 }
 
 .links a {
